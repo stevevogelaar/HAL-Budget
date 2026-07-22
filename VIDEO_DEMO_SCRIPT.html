@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HAL Budget — Demo Video Shotlist</title>
+  <style>
+    :root {
+      --primary: #22c55e;
+      --bg: #ffffff;
+      --text: #0f172a;
+      --card: #f8fafc;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 24px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .meta {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+    .meta p { margin: 4px 0; }
+    h2 {
+      font-size: 20px;
+      margin-top: 32px;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 6px;
+    }
+    h3 {
+      font-size: 17px;
+      margin-top: 24px;
+      color: var(--primary);
+    }
+    .shot {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      page-break-inside: avoid;
+    }
+    .shot-header {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    .caption {
+      background: #ffffff;
+      border-left: 3px solid #cbd5e1;
+      padding: 10px 14px;
+      font-style: italic;
+      margin: 8px 0;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 24px;
+    }
+    li { margin-bottom: 4px; }
+    .highlight {
+      background: #dcfce7;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    @media print {
+      body { padding: 0; }
+      .shot { break-inside: avoid; }
+      h2 { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HAL Budget — Demo Video Shotlist</h1>
+    <div class="subtitle">YouTube submission for the GDG Windsor Build with AI Gemma Hackathon</div>
+
+    <div class="meta">
+      <p><strong>Track:</strong> Edge / On-Device</p>
+      <p><strong>Runtime target:</strong> 3:30–4:00</p>
+      <p><strong>Screen driver:</strong> <span class="highlight">HAL (AI)</span> controls the browser via Playwright.</p>
+      <p><strong>Screen recorder / producer:</strong> Steve Vogelaar</p>
+      <p><strong>Editing note:</strong> Long pauses or mistakes can be cut; each shot is a clean restart point.</p>
+    </div>
+
+    <h2>Vision / Introduction</h2>
+    <p>
+      Cloud AI finance apps send your transactions, balances, and questions to someone else's server. HAL Budget does the opposite: it runs Gemma 4 locally, stores everything in a SQLite file on your laptop, and answers plain-English questions about your money. <strong>HAL's project</strong> is a local-first AI finance assistant built to prove that useful, private AI can live right on your machine — no cloud, no API keys, no data leaving the box.
+    </p>
+    <p>
+      The video walks through every page of the app and shows what it does today, plus the <strong>.bot upgrade</strong> each page will get in the future.
+    </p>
+
+    <h2>Recording Setup</h2>
+    <ol>
+      <li>Start Ollama and make sure <code>gemma4:e2b</code> is pulled.</li>
+      <li>Start HAL Budget: <code>streamlit run app.py</code> or <code>Start-HALBudget.bat</code>.</li>
+      <li>Warm the cache by clicking the four demo Chat questions once.</li>
+      <li>Start screen recording.</li>
+      <li>HAL runs the Playwright driver; Steve adds narration/captions in post.</li>
+    </ol>
+
+    <h2>Shots</h2>
+
+    <div class="shot">
+      <div class="shot-header">Shot 1 — Home Page (0:00–0:25)</div>
+      <div class="label">Screen</div>
+      <p>HAL Budget homepage, dark mode. Logo and green header visible.</p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "Most AI finance apps send your transactions to the cloud. HAL Budget doesn't. It runs Gemma 4 locally, keeps your data in SQLite, and answers plain-English questions about your money. HAL's project is a local-first AI finance assistant — no cloud, no API keys."
+      </div>
+      <div class="label">Action</div>
+      <p>Hold on the homepage for 6–8 seconds.</p>
+      <div class="label">Future .bot upgrade</div>
+      <p>Home.bot will greet you with a daily money briefing and proactive alerts.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 2 — Chat: Spending Question (0:25–0:55)</div>
+      <div class="label">Screen</div>
+      <p>Chat tab. Click demo button: <em>"How much did I spend on Amazon?"</em></p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "The Chat page is where you ask questions. 'How much did I spend on Amazon?' HAL translates that into a safe, read-only SQL query through Gemma 4 and gives you the answer."
+      </div>
+      <div class="label">Action</div>
+      <p>Click the button. Wait for the answer box. Hold for 3 seconds.</p>
+      <div class="label">Future .bot upgrade</div>
+      <p>Chat.bot will handle follow-up questions, remember context, and suggest next questions.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 3 — Chat: Itemized Receipt Query (0:55–1:20)</div>
+      <div class="label">Screen</div>
+      <p>Chat tab. Click demo button: <em>"How much did I spend on coffee?"</em></p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "It can go deeper than totals. 'How much did I spend on coffee?' searches itemized receipts, not just merchants, so you see exactly what you bought."
+      </div>
+      <div class="label">Action</div>
+      <p>Click the button. Wait for answer. Hold for 3 seconds.</p>
+      <div class="label">Future .bot upgrade</div>
+      <p>Chat.bot will combine receipts, track trends, and warn you before you blow a budget.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 4 — Chat: Guardrail (1:20–1:45)</div>
+      <div class="label">Screen</div>
+      <p>Chat tab. Type: <em>"I just bought a car for $21,000"</em></p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "HAL is read-only. If you try to add a purchase, it tells you honestly that it can't change your balance yet. No made-up numbers."
+      </div>
+      <div class="label">Action</div>
+      <p>Type the message, press Enter. Wait for the "Unable to record" answer. Hold for 3 seconds.</p>
+      <div class="label">Future .bot upgrade</div>
+      <p>Chat.bot will let you add transactions conversationally and double-check them before saving.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 5 — Scan Receipt Page (1:45–2:20)</div>
+      <div class="label">Screen</div>
+      <p>Scan Receipt tab. Select Walmart mock receipt, click <strong>Scan Receipt</strong>, then <strong>Save to Transactions</strong>.</p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "The Scan Receipt page breaks a receipt into line items. Scan a Walmart receipt, save it, and HAL stores the transaction, the receipt, and every item separately."
+      </div>
+      <div class="label">Action</div>
+      <ol>
+        <li>Click the Scan Receipt tab.</li>
+        <li>Click <strong>Scan Receipt</strong>.</li>
+        <li>Wait for the receipt to render.</li>
+        <li>Click <strong>Save to Transactions</strong>.</li>
+        <li>Wait for the success message.</li>
+      </ol>
+      <div class="label">Future .bot upgrade</div>
+      <p>Scan Receipt.bot will use real OCR on phone photos and auto-categorize every line item.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 6 — Dashboard Page (2:20–2:50)</div>
+      <div class="label">Screen</div>
+      <p>Dashboard tab.</p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "The Dashboard page shows your cash flow, upcoming bills, savings goals, and where you spend the most — all live from your local database."
+      </div>
+      <div class="label">Action</div>
+      <p>Click the Dashboard tab. Scroll slowly through the charts. Hold for 5 seconds.</p>
+      <div class="label">Future .bot upgrade</div>
+      <p>Dashboard.bot will generate plain-English summaries and flag unusual spending automatically.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 7 — All Transactions Page (2:50–3:05)</div>
+      <div class="label">Screen</div>
+      <p>All Transactions tab.</p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "The All Transactions page is your searchable, filterable history. You can drill into dates, categories, merchants, or payment methods."
+      </div>
+      <div class="label">Action</div>
+      <p>Click the All Transactions tab. Scroll the table. Hold for 3 seconds.</p>
+      <div class="label">Future .bot upgrade</div>
+      <p>All Transactions.bot will let you search with natural language like 'show me every coffee purchase in July'.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 8 — Settings Page (3:05–3:35)</div>
+      <div class="label">Screen</div>
+      <p>Settings tab.</p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "The Settings page shows the local AI status. You can switch between Ollama models, and if the model is down, there's a button to restart it. No cloud required."
+      </div>
+      <div class="label">Action</div>
+      <p>Click the Settings tab. Pause on the Ollama status. Optionally click the model dropdown. Hold for 5 seconds.</p>
+      <div class="label">Future .bot upgrade</div>
+      <p>Settings.bot will auto-tune model selection based on speed vs. accuracy and warn you before a model download finishes.</p>
+    </div>
+
+    <div class="shot">
+      <div class="shot-header">Shot 9 — Outro (3:35–3:55)</div>
+      <div class="label">Screen</div>
+      <p>Homepage or GitHub repo in a browser tab.</p>
+      <div class="label">Caption</div>
+      <div class="caption">
+        "HAL Budget — your money, your machine, your answers. Built by HAL and Steve for the Edge/On-Device track. Code and demo at github.com/stevevogelaar/HAL-Budget."
+      </div>
+      <div class="label">Action</div>
+      <p>Hold for 6–8 seconds. End recording.</p>
+    </div>
+
+    <h2>Pacing Notes</h2>
+    <ul>
+      <li>Target runtime: 3:30–4:00.</li>
+      <li>Every click is followed by a 2–3 second hold.</li>
+      <li>Use cached demo questions for instant answers.</li>
+      <li>Keep the "LLM engine online" status visible when possible.</li>
+      <li>Long pauses or mistakes can be edited out; each shot is independent.</li>
+    </ul>
+
+    <h2>Restart Points</h2>
+    <p>If recording is stopped mid-take, resume from any of these clean points:</p>
+    <ol>
+      <li>Homepage</li>
+      <li>Chat tab (before clicking a demo question)</li>
+      <li>Scan Receipt tab (before clicking Scan Receipt)</li>
+      <li>Dashboard tab</li>
+      <li>All Transactions tab</li>
+      <li>Settings tab</li>
+    </ol>
+
+    <h2>Roles</h2>
+    <ul>
+      <li><strong>HAL:</strong> Controls the browser, executes clicks, types messages, controls timing.</li>
+      <li><strong>Steve:</strong> Records the screen, reads or pastes captions, edits the final video, uploads to YouTube.</li>
+    </ul>
+    <p><em>This video demo is performed by HAL, with Steve as producer.</em></p>
+  </div>
+</body>
+</html>

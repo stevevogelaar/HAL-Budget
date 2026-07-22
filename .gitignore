@@ -7,6 +7,9 @@
 # Generated cache
 sql_cache.json
 
+# Distribution/packaging
+HAL-Budget-Project.zip
+
 # Python
 __pycache__/
 *.py[cod]
