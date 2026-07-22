@@ -2,9 +2,9 @@
 
 **Goal:** A 3–4 minute screen demo that shows HAL Budget as a real, local, Gemma 4-powered finance assistant. Friendly, fast, and focused on the Edge/On-Device track.
 
-**Who is driving the screen:** HAL (the AI assistant) is controlling the browser via Playwright. Steve is recording the screen and adding narration/captions afterward.
+**Who is driving the screen:** The AI assistant is controlling the browser via Playwright. Steve is recording the screen and adding narration/captions afterward.
 
-**Stopping and restarting:** If the recording needs to pause, Steve can stop at any shot. HAL can resume exactly from that shot — long pauses can be edited out later.
+**Stopping and restarting:** If the recording needs to pause, Steve can stop at any shot. The assistant can resume exactly from that shot — long pauses can be edited out later.
 
 ---
 
@@ -22,7 +22,7 @@ The video moves through every page of the app and shows what it does today, plus
 2. Start HAL Budget: `streamlit run app.py` (or `Start-HALBudget.bat`).
 3. Warm the cache by clicking the four demo questions in the app once. This creates `sql_cache.json` so answers are instant.
 4. Start screen recording.
-5. HAL runs the Playwright driver; Steve adds narration/captions in post.
+5. The assistant runs the Playwright driver; Steve adds narration/captions in post.
 
 ---
 
@@ -46,7 +46,7 @@ The video moves through every page of the app and shows what it does today, plus
 **Screen:** Chat tab. Click the demo button: *"How much did I spend on Amazon?"*
 
 **Narration / Caption:**
-> "The Chat page is where you ask questions. 'How much did I spend on Amazon?' HAL translates that into a safe, read-only SQL query through Gemma 4 and gives you the answer."
+> "The Chat page is where you ask questions. 'How much did I spend on Amazon?' The agent translates that into a safe, read-only SQL query through Gemma 4 and gives you the answer."
 
 **Action:** Click the button. Wait for the answer box. Hold for 3 seconds.
 
@@ -72,7 +72,7 @@ The video moves through every page of the app and shows what it does today, plus
 **Screen:** Chat tab. Type: *"I just bought a car for $21,000"*
 
 **Narration / Caption:**
-> "HAL is read-only. If you try to add a purchase, it tells you honestly that it can't change your balance yet. No made-up numbers."
+> "The agent is read-only. If you try to add a purchase, it tells you honestly that it can't change your balance yet. No made-up numbers."
 
 **Action:** Type the message, press Enter. Wait for the "Unable to record" answer. Hold for 3 seconds.
 
@@ -85,7 +85,7 @@ The video moves through every page of the app and shows what it does today, plus
 **Screen:** Scan Receipt tab. Select the Walmart mock receipt, click **Scan Receipt**, then **Save to Transactions**.
 
 **Narration / Caption:**
-> "The Scan Receipt page breaks a receipt into line items. Scan a Walmart receipt, save it, and HAL stores the transaction, the receipt, and every item separately."
+> "The Scan Receipt page breaks a receipt into line items. Scan a Walmart receipt, save it, and the agent stores the transaction, the receipt, and every item separately."
 
 **Action:**
 1. Click the Scan Receipt tab.
@@ -131,7 +131,7 @@ The video moves through every page of the app and shows what it does today, plus
 **Narration / Caption:**
 > "The Settings page shows the local AI status. You can switch between Ollama models, and if the model is down, there's a button to restart it. No cloud required."
 
-**Action:** Click the Settings tab. Pause on the Ollama status. Optionally click the model dropdown. Hold for 5 seconds.
+**Action:** Click the Settings tab. Pause on the Ollama status. Optionally click the model dropdown to show available models. Hold for 5 seconds.
 
 **Future .bot upgrade:** Settings.bot will auto-tune model selection based on speed vs. accuracy and warn you before a model download finishes.
 
@@ -142,7 +142,7 @@ The video moves through every page of the app and shows what it does today, plus
 **Screen:** Back to the homepage, or show the GitHub repo in a browser tab.
 
 **Narration / Caption:**
-> "HAL Budget — your money, your machine, your answers. Built by HAL and Steve for the Edge/On-Device track. Code and demo at github.com/stevevogelaar/HAL-Budget."
+> "HAL Budget — your money, your machine, your answers. Built by the HAL team and Steve for the Edge/On-Device track. Code and demo at github.com/stevevogelaar/HAL-Budget."
 
 **Action:** Hold for 6–8 seconds. End recording.
 
@@ -151,7 +151,7 @@ The video moves through every page of the app and shows what it does today, plus
 ## Pacing Notes
 
 - Total runtime target: **3:30–4:00**.
-- Every click is followed by a 2–3 second hold so the viewer can read the result.
+- Every click should be followed by a 2–3 second hold so the viewer can read the result.
 - Use the cached demo questions for speed.
 - If the LLM status indicator shows "LLM engine online" in the Chat tab, keep it visible — it reinforces the local model angle.
 - Long pauses or mistakes can be edited out; each shot is independent.
@@ -169,13 +169,13 @@ If the recording is stopped mid-take, resume from any of these clean restart poi
 5. All Transactions tab
 6. Settings tab
 
-Just tell HAL which shot to resume from.
+Just tell the assistant which shot to resume from.
 
 ---
 
 ## Roles
 
-- **HAL:** Controls the browser, executes clicks, types messages, controls timing.
+- **The AI assistant:** Controls the browser, executes clicks, types messages, controls timing.
 - **Steve:** Records the screen, reads or pastes captions, edits the final video, uploads to YouTube.
 
-*This video demo is performed by HAL, with Steve as producer.*
+*This video demo is performed by the AI assistant, with Steve as producer.*
