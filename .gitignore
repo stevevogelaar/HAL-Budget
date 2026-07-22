@@ -1,0 +1,33 @@
+# SQLite databases
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Generated cache
+sql_cache.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.env
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
