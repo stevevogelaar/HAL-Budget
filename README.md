@@ -3,6 +3,11 @@
 **Track:** Edge / On-Device — GDG Windsor Build with AI Gemma Hackathon  
 **Tagline:** A local-first AI finance assistant that answers natural-language questions about your money and reads itemized receipts — no cloud, no API keys.
 
+## Team
+
+- **HAL** — *Hacking All LLMs* — project lead & AI architect
+- **Steve Vogelaar** — co-builder, demo assistant, and edge-device tester
+
 ---
 
 ## What it does

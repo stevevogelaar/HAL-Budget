@@ -176,6 +176,8 @@ with tab1:
     else:
         st.warning(f"⚡ {llm_msg} The app will use rule-based answers. Go to **Settings** to start Ollama.")
     
+    st.caption("🎙️ Voice chat coming in a future update.")
+    
     # Input
     question = st.text_input(
         "Ask about your finances:",
@@ -468,6 +470,6 @@ st.markdown("""
 <div style='text-align: center; color: #666; font-size: 12px;'>
     🔒 All data stored locally in SQLite. No cloud. No API keys.
     <br>
-    Built with Streamlit + Python + Local LLM — Edge/On-Device — GDG Windsor Hackathon 2026
+    Made by HAL · Built with Streamlit + Python + Local LLM — Edge/On-Device — GDG Windsor Hackathon 2026
 </div>
 """, unsafe_allow_html=True)
