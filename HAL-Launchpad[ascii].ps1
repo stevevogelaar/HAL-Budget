@@ -81,12 +81,18 @@ function ShowIps {
     Read-Host '  Press Enter to return to menu'
 }
 
-function LaunchApp($name, $folder, $port) {
+function LaunchApp($name, $folder, $batchFile, $port) {
     Clear-Host
     Write-Host ''
     Write-Host (" >> Launching {0} on port {1}..." -f $name, $port) -ForegroundColor Magenta
-    $path = Join-Path $Root $folder
-    Start-Process cmd.exe -ArgumentList '/k', ("cd /d `""{0}`"" && Start-{1}.bat" -f $path, $name) -WindowStyle Normal
+    $workingDirectory = Join-Path $Root $folder
+    $batchPath = Join-Path $workingDirectory $batchFile
+    if (-not (Test-Path -LiteralPath $batchPath)) {
+        Write-Host (" !! Batch file not found: {0}" -f $batchPath) -ForegroundColor Red
+        Start-Sleep -Seconds 2
+        return
+    }
+    Start-Process cmd.exe -ArgumentList '/k', "`"$batchPath`"" -WorkingDirectory $workingDirectory -WindowStyle Normal
     Start-Sleep -Seconds 4
 }
 
@@ -97,13 +103,13 @@ while ($true) {
     Remove-Item $ChoiceFile -Force -ErrorAction SilentlyContinue
 
     switch ($choice.Trim().ToUpper()) {
-        '1' { LaunchApp 'HAL-Guardian' 'HAL-Guardian' 8501; ShowIps }
-        '2' { LaunchApp 'HAL-Budget' 'HAL-Budget' 8502; ShowIps }
-        '3' { LaunchApp 'miseBot' 'miseBot' 8503; ShowIps }
+        '1' { LaunchApp 'HAL Guardian' 'HAL-Guardian' 'Start-HALGuardian.bat' 8501; ShowIps }
+        '2' { LaunchApp 'HAL Budget' 'HAL-Budget' 'Start-HALBudget.bat' 8502; ShowIps }
+        '3' { LaunchApp 'miseBot' 'miseBot' 'Start-miseBot.bat' 8503; ShowIps }
         '4' {
-            LaunchApp 'HAL-Guardian' 'HAL-Guardian' 8501
-            LaunchApp 'HAL-Budget' 'HAL-Budget' 8502
-            LaunchApp 'miseBot' 'miseBot' 8503
+            LaunchApp 'HAL Guardian' 'HAL-Guardian' 'Start-HALGuardian.bat' 8501
+            LaunchApp 'HAL Budget' 'HAL-Budget' 'Start-HALBudget.bat' 8502
+            LaunchApp 'miseBot' 'miseBot' 'Start-miseBot.bat' 8503
             ShowIps
         }
         'V' { ShowIps }
