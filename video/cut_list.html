@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HAL Budget Demo - Cut List</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #111;
+      padding: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 32px; margin-bottom: 8px; }
+    .subtitle { color: #555; font-size: 16px; margin-bottom: 24px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #0b0f19; color: #4ade80; }
+    tr:nth-child(even) { background: #f6f6f6; }
+    .source { font-weight: 600; }
+    .note { font-size: 14px; color: #444; margin-top: 30px; padding: 14px; background: #f0f0f0; border-left: 4px solid #4ade80; }
+    @media print {
+      body { padding: 0; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1>HAL Budget Demo Video — Cut List</h1>
+  <p class="subtitle">Produced for Kaggle / YouTube submission · Edge/On-Device Track</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Source File</th>
+        <th>Live B-Roll Timecode</th>
+        <th>Overlay / Caption</th>
+        <th>Duration</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td class="source">intro_card_10s.mp4</td>
+        <td>—</td>
+        <td>(none — music + card)</td>
+        <td>10s</td>
+        <td>Start with Tom's intro sting.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="source">shots/01_home.mp4</td>
+        <td>—</td>
+        <td>"I'm proud to present HAL Budget to you" (and following captions)</td>
+        <td>35.5s</td>
+        <td>Existing captions already burned in.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="source">b-roll.mp4</td>
+        <td>~00:10s — click Amazon button</td>
+        <td>Overlay: subtitles/subtitle_amazon.png</td>
+        <td>2–3s</td>
+        <td>Live click + spinner. Cut before answer.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="source">shots/02_chat_amazon.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>19s</td>
+        <td>Full Amazon narration over stable answer.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td class="source">b-roll.mp4</td>
+        <td>~00:59s — click Coffee button</td>
+        <td>Overlay: subtitles/subtitle_coffee.png</td>
+        <td>2–3s</td>
+        <td>Live click + spinner. Cut before answer.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td class="source">shots/03_chat_coffee.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>15s</td>
+        <td>Full coffee narration.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td class="source">b-roll.mp4</td>
+        <td>~02:00s — type guardrail message</td>
+        <td>Overlay: subtitles/subtitle_guardrail.png</td>
+        <td>2–3s</td>
+        <td>Live typing + submit. Cut before answer.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td class="source">shots/04_chat_guardrail.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>14s</td>
+        <td>Full guardrail narration.</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td class="source">b-roll.mp4</td>
+        <td>~03:20s — click Scan Receipt</td>
+        <td>Overlay: subtitles/subtitle_scan.png</td>
+        <td>3–4s</td>
+        <td>Live scan + parsed items appearing.</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td class="source">shots/05_scan_receipt.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>16s</td>
+        <td>Full receipt narration.</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td class="source">b-roll.mp4</td>
+        <td>~08:00s — scroll All Transactions, filter Canadian Tire</td>
+        <td>Overlay: subtitles/subtitle_transactions.png</td>
+        <td>4–5s</td>
+        <td>Show scrolling + dropdowns + filter result.</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td class="source">shots/07_transactions.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>11s</td>
+        <td>Full transactions narration.</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td class="source">shots/06_dashboard.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>12s</td>
+        <td>Dashboard overview. Can place before or after transactions.</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td class="source">b-roll.mp4</td>
+        <td>~13:00s — open model dropdown, reset demo data</td>
+        <td>Overlay: subtitles/subtitle_settings.png</td>
+        <td>4–5s</td>
+        <td>Show dropdown click and reset button.</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td class="source">shots/08_settings.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>14s</td>
+        <td>Full settings narration.</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td class="source">shots/09_outro.mp4</td>
+        <td>—</td>
+        <td>Burned-in captions</td>
+        <td>20s</td>
+        <td>Spoken outro + captions.</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td class="source">outro_card_10s.mp4</td>
+        <td>—</td>
+        <td>(none — music + card)</td>
+        <td>10s</td>
+        <td>End with Tom's outro sting.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>Subtitle overlays:</strong> All PNGs are 1920×1080 with a transparent background except for the dark top caption bar. Drop them on a track above your live B-roll in Resolve. The burned-in captions on the <code>shots/*.mp4</code> files are already composited; no overlay needed for those.
+  </div>
+
+  <div class="note no-print">
+    <strong>Files are in:</strong> <code>C:\Users\Steve Vogelaar\Documents\_IT Oversight\Hackathon\HAL-Budget\video\</code>
+  </div>
+
+  <p class="no-print" style="margin-top: 20px; font-size: 14px; color: #666;">
+    Print this page (Ctrl+P) for a physical checklist while editing.
+  </p>
+</body>
+</html>

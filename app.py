@@ -443,9 +443,10 @@ with tab5:
     st.markdown("#### 🔄 Reset Demo Data")
     st.markdown("*Demo feature only — not part of a real app.*")
     st.markdown("If the database gets too full from testing, reset it back to the original fake demo data.")
-    
+    st.markdown("🎬 **For live demos:** this also deletes the SQL cache so the next question runs live against your local model.")
+
     if st.button("Reset demo data now", type="secondary"):
-        with st.spinner("Resetting database..."):
+        with st.spinner("Resetting database and clearing SQL cache..."):
             try:
                 # Clear cached SQL so the new database doesn't reuse stale queries
                 if 'engine' in st.session_state:
@@ -459,7 +460,7 @@ with tab5:
                 st.session_state.receipt_save_msg = None
                 st.session_state.last_question = ""
                 st.session_state.current_question = ""
-                st.success("Demo data reset. Refreshing...")
+                st.success("Demo data and SQL cache cleared. Refreshing...")
                 st.rerun()
             except Exception as e:
                 st.error(f"Could not reset demo data: {e}")

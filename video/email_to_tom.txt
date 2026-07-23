@@ -1,0 +1,28 @@
+Subject: Music stings for HAL Budget hackathon demo — copy/paste prompt included
+
+Hey Tom,
+
+I'm bugging you because you are the only person I know with an AI music setup, and I'm on a tight deadline for a demo video.
+
+The project is HAL Budget, a pet project I've been pouring spare hours into. It's a privacy-first, local AI finance assistant: your transactions stay in a SQLite file on your own machine, and Gemma 4 (running through Ollama) answers plain-English money questions without ever touching the cloud. No API keys, no data leaks, just your money on your machine.
+
+Why I need the music: I submitted HAL Budget to the GDG Windsor Build with AI Gemma Hackathon under the Edge/On-Device track, and now I'm cutting the demo video for the Kaggle/YouTube submission. I have the visuals and screen recordings handled, but it desperately needs a short intro/outro sting so it doesn't feel like a silent slideshow.
+
+I know you're busy, so I've done the prep work. If your AI music generator can handle a copy-paste prompt, here is exactly what I'd love it to produce as two separate MP3s:
+
+---
+
+**Intro sting: hal-budget-intro.mp3 (10 seconds)**
+Create a 10-second instrumental intro sting for a tech demo video called "HAL Budget." Modern, upbeat fintech/AI feel with clean synthesizers, a light electronic groove, and a confident energy build that resolves cleanly at the 10-second mark. Bright major key, BPM around 120. No lyrics. Mood: trustworthy, innovative, privacy-focused, friendly.
+
+**Outro sting: hal-budget-outro.mp3 (10 seconds)**
+Create a 10-second instrumental outro sting for a tech demo video called "HAL Budget." Upbeat, positive resolve with a friendly electronic feel. Gentle fade-out at the end. Same style as the intro: clean synths, light groove, major key, BPM around 120. No lyrics.
+
+---
+
+If the files come back as MP3s named `hal-budget-intro.mp3` and `hal-budget-outro.mp3`, I can drop them straight into Resolve and finish the cut.
+
+Could you CC me on the reply so I can grab them from there? Really appreciate you, and I owe you a coffee (or a beer) for the rescue.
+
+Thanks,
+HAL
